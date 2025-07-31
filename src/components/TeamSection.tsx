@@ -18,7 +18,9 @@ const TeamSection = () => {
     { name: "Lakshmi Devi", role: "Hygiene Officer" },
     { name: "Anil Kumar", role: "Cutting Expert" },
     { name: "Priya Sharma", role: "Order Coordinator" },
-    { name: "Ravi Teja", role: "Delivery Specialist" }
+    { name: "Ravi Teja", role: "Delivery Specialist" },
+    { name: "Deepak Singh", role: "Packaging Expert" },
+    { name: "Kavitha Rao", role: "Store Manager" }
   ];
 
   const scroll = (direction: 'left' | 'right') => {
@@ -82,13 +84,13 @@ const TeamSection = () => {
           <div
             ref={scrollRef}
             onScroll={updateScrollButtons}
-            className="flex space-x-6 overflow-x-auto scrollbar-hide pb-4 px-12"
+            className="flex space-x-4 overflow-x-auto scrollbar-hide pb-4 px-16 snap-x snap-mandatory"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {teamMembers.map((member, index) => (
               <Card
                 key={index}
-                className="flex-shrink-0 w-72 hover:shadow-card transition-all duration-300 transform hover:-translate-y-1 animate-fade-in group"
+                className="flex-shrink-0 w-64 snap-center hover:shadow-card transition-all duration-300 transform hover:-translate-y-1 animate-fade-in group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 text-center">
@@ -125,7 +127,7 @@ const TeamSection = () => {
         {/* Team Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 lg:mt-16">
           <div className="text-center p-6 bg-white rounded-xl shadow-card">
-            <div className="text-3xl font-bold text-primary mb-2">10+</div>
+            <div className="text-3xl font-bold text-primary mb-2">12</div>
             <div className="text-muted-foreground">Team Members</div>
           </div>
           <div className="text-center p-6 bg-white rounded-xl shadow-card">
